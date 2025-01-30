@@ -163,6 +163,7 @@ qiskit-addon-obp==0.1.0
 qiskit-addon-sqd==0.8.1
 qiskit-addon-utils==0.1.0
 qiskit-aer==0.15.1
+qiskit-algorithms==0.3.1
 qiskit-ibm-runtime==0.34.0
 qiskit-serverless==0.14.2
 ray==2.41.0
