@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/ismae/Desktop/vcgc/tweedledum"
+    "nixEnvSelector.suggestion": false,
+    "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix"
 }
