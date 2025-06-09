@@ -1,0 +1,10 @@
+c graph-001
+c 5 vertices, 4 edges, 2 colors
+p edge 5 4
+n 1 0
+n 2 1
+e 0 1
+e 1 2
+e 2 3
+e 3 4
+x colors 2

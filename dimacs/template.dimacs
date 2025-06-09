@@ -1,0 +1,5 @@
+c Comments: This is an example of a comment line.
+c Problem line: p FORMAT NODES EDGES
+c Node Descriptors for node "n": n ID VALUE
+c Edge Descriptors for edge "W-V": e W V 
+c Parameter Descriptors: x PARAM VALUE  
