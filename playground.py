@@ -1,6 +1,5 @@
-from vcgc.dimacs import *
+from vcgc.network import *
 
-vcp = VCP()
-g000 = vcp.read("dimacs/g000.dimacs")
-
-print(g000)
+G = VCPNetwork()
+G.read_dimacs("dimacs/g000.dimacs")
+G.draw_colored_graph()
