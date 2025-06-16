@@ -30,6 +30,7 @@ in pkgs.mkShell rec {
   
   # Fix for C++ library loading issues
   shellHook = ''
+    exec zsh
     # Make libraries available to the Python environment
     export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH
     
@@ -60,3 +61,52 @@ in pkgs.mkShell rec {
     echo "LD_LIBRARY_PATH: $LD_LIBRARY_PATH"
   '';
 }
+
+# with import <nixpkgs> { };
+
+# let
+#   pythonPackages = python310Packages; # Change to Python 3.10
+# in pkgs.mkShell rec {
+#   name = "impurePythonEnv";
+#   venvDir = "./.venv";
+#   buildInputs = [
+
+#     pkgs.stdenv.cc.cc.lib
+
+#     git-crypt
+
+#     pythonPackages.python
+#     pythonPackages.ipykernel
+#     pythonPackages.pyzmq    # Adding pyzmq explicitly
+#     pythonPackages.venvShellHook
+#     pythonPackages.pip
+#     pythonPackages.numpy
+#     pythonPackages.pandas
+#     pythonPackages.requests
+
+#     # sometimes you might need something additional like the following - you will get some useful error if it is looking for a binary in the environment.
+#     taglib
+#     openssl
+#     git
+#     libxml2
+#     libxslt
+#     libzip
+#     zlib
+
+#   ];
+
+#   # Run this command, only after creating the virtual environment
+#   postVenvCreation = ''
+#     unset SOURCE_DATE_EPOCH
+    
+#     python -m ipykernel install --user --name=myenv4 --display-name="myenv4"
+#     pip install -r requirements.txt
+#   '';
+
+#   # Now we can execute any commands within the virtual environment.
+#   # This is optional and can be left out to run pip manually.
+#   postShellHook = ''
+#     # allow pip to install wheels
+#     unset SOURCE_DATE_EPOCH
+#   '';
+# }

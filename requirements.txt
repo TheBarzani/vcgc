@@ -20,4 +20,4 @@ qiskit-ibm-runtime==0.34.0
 mthree
 
 # Sythesis packages
-tweedledum # Deprecated package
+# tweedledum # Deprecated package

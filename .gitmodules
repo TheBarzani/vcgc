@@ -1,0 +1,3 @@
+[submodule "tweedledum"]
+	path = tweedledum
+	url = https://github.com/TheBarzani/tweedledum.git
