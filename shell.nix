@@ -19,12 +19,14 @@ in pkgs.mkShell rec {
     pythonPackages.requests
     pythonPackages.networkx
     pythonPackages.matplotlib
+    pythonPackages.pkgconfig
     # Add build dependencies
     pythonPackages.setuptools
     pythonPackages.wheel
     pythonPackages.scikit-build
     pkgs.cmake
     pkgs.ninja
+    pkgs.pkg-config
     # C++ specific tools needed for compilation
     pkgs.gcc
     pkgs.gnumake
@@ -45,6 +47,7 @@ in pkgs.mkShell rec {
     
     # Make sure both your local package and the venv packages are accessible
     export PYTHONPATH="$PWD:$PWD/${venvDir}/lib/python3.10/site-packages:$PYTHONPATH"
+    export PYTHONPATH="./tweedledum/python:$PYTHONPATH"
 
   '';
 
