@@ -1,4 +1,5 @@
 {
     "nixEnvSelector.suggestion": false,
-    "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix"
+    "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix",
+    "cmake.sourceDirectory": "/home/mael/Desktop/vcgc/tweedledum"
 }
