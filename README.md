@@ -1,4 +1,4 @@
-# VCGC: Vertex Coloring with Grover's Circuit 🎨🔍🧩
+# VCGC: Vertex Coloring with Grover's Circuit 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -95,12 +95,12 @@ plot_distribution(new_counts)
 ## 📋 Requirements
 
 - Python 3.10
-- Qiskit 1.3.2
-- Qiskit Aer 0.15+
-- Matplotlib 3.10+
-- NumPy 2.0+
-- mthree (for error mitigation)
-- qiskit-ibm-runtime 0.34.0
+- Qiskit 
+- Qiskit Aer 
+- Matplotlib 
+- NumPy 
+- mthree
+- qiskit-ibm-runtime
 
 ## 🤝 Contributing
 
