@@ -18,6 +18,8 @@ cvxpy>=1.6.0
 pylatexenc
 qiskit-ibm-runtime==0.34.0
 mthree
+networkx
+dotenv
 
 # Sythesis packages
 # tweedledum # Deprecated package
