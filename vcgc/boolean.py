@@ -13,6 +13,7 @@ class BooleanFunction():
                 print(' ∧ ', end='')
             u, v = e
             print(f'(v{u} != v{v})', end='')
+        print('\n')
 
     def generate_coloring_expression(self, network: VCPNetwork):
         """
@@ -65,9 +66,9 @@ class BooleanFunction():
         """
         expression, var_order = self.generate_coloring_expression(network)
         
-        print(f"Generated expression: {expression}")
-        print(f"Variable order: {var_order}")
-        
+        print(f"Generated expression: {expression}\n")
+        print(f"Variable order: {var_order}\n")
+
         # Create BoolFunction from expression
         return BoolFunction.from_expression(expression, var_order)
 

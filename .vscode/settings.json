@@ -1,7 +1,7 @@
 {
     "nixEnvSelector.suggestion": false,
     "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix",
-    "cmake.sourceDirectory": "/home/mael/Desktop/vcgc/tweedledum",
+    "cmake.sourceDirectory": "/home/mael/Desktop/qia/vcgc/tweedledum",
     "files.associations": {
         "*.inc": "cpp",
         "array": "cpp",

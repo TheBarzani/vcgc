@@ -1,7 +1,4 @@
 from vcgc.network import *
-from networkx import bfs_tree
-import matplotlib.pyplot as plt
-import networkx as nx
 from vcgc.boolean import BooleanFunction
 from tweedledum.synthesis import xag_synth
 from tweedledum.qiskit import to_qiskit
@@ -34,5 +31,6 @@ def xag_synthesizer(cf):
     return qc_qiskit
 
 # Now you can use it with your XAG synthesizer
-grover_oracle = xag_synthesizer(tweedledum_func)
+grover_oracle = xag_synthesizer(tweedledum_func_multibit)
+grover_oracle.draw(output='mpl', filename='grover_oracle.png')
 
