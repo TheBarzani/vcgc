@@ -2,6 +2,7 @@ from vcgc.network import *
 from vcgc.boolean import BooleanFunction
 from tweedledum.synthesis import xag_synth
 from tweedledum.qiskit import to_qiskit
+from tweedledum.bool_function_compiler.bool_function import BoolFunction
 
 
 network = VCPNetwork()
@@ -32,5 +33,16 @@ def xag_synthesizer(cf):
 
 # Now you can use it with your XAG synthesizer
 grover_oracle = xag_synthesizer(tweedledum_func_multibit)
-grover_oracle.draw(output='mpl', filename='grover_oracle.png')
+grover_oracle.draw(output='mpl', filename='testing/grover_oracle.png')
+
+bf.create_manual_verilog(network, "testing/manual_coloring.v")
+bf.write_verilog_with_custom_mapping(network, "testing/manual_coloring_custom.v")
+
+cf = BoolFunction.from_verilog_file("testing/manual_coloring.v")
+# Now you can use it with your XAG synthesizer
+grover_oracle_verilog = xag_synthesizer(cf)
+grover_oracle_verilog.draw(output='mpl', filename='testing/grover_oracle_verilog.png')
+print(grover_oracle.depth())
+print(grover_oracle_verilog.depth())
+
 
