@@ -3,3 +3,4 @@ c Problem line: p FORMAT NODES EDGES
 c Node Descriptors for node "n": n ID VALUE
 c Edge Descriptors for edge "W-V": e W V 
 c Parameter Descriptors: x PARAM VALUE  
+c https://sites.google.com/site/graphcoloring/vertex-coloring

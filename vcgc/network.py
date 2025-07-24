@@ -51,7 +51,7 @@ class VCPNetwork:
         color_map = color_map[:num_colors]
         
         # Create vertices with color attributes
-        for v in range(num_vertices):
+        for v in range(1,num_vertices):
             # Check if this node has a color assigned
             if str(v) in colored_nodes:
                 color_idx = int(colored_nodes[str(v)])
@@ -87,7 +87,7 @@ class VCPNetwork:
         node_size : int, optional
             Size of the nodes in the visualization
         """
-        draw_colored_graph(self.graph, pos=pos, figsize=figsize, node_size=node_size)
+        draw_colored_graph(self.graph,name=name or "graph.png", pos=pos, figsize=figsize, node_size=node_size)
     
     def bfs_traversal(self, root: int = 0) -> nx.Graph:
         """
@@ -263,8 +263,8 @@ def draw_colored_graph(G: nx.Graph, name: str = "graph.png", pos: Optional[dict]
     node_size : int, optional
         Size of the nodes in the visualization
     """
-    # Extract node colors for drawing
-    node_colors = [G.nodes[node]['color'] for node in G.nodes()]
+    # Extract node colors for drawing, with fallback for missing color attribute
+    node_colors = [G.nodes[node].get('color', 'lightgray') for node in G.nodes()]
     
     # Create custom labels in the format "node:|color⟩"
     custom_labels = {}

@@ -5,7 +5,8 @@ from vcgc.synthesis import Synthesizer
 def test() -> None:
 
     network = VCPNetwork()
-    network.read_dimacs("dimacs/g003.dimacs")
+    network.read_dimacs("dimacs/myciel3.col")
+    network.draw_graph(name="testing/graph.png", node_size=500)
     bf = BooleanFunction()
     bf.print_vertex_constraints(network)
 
@@ -19,12 +20,12 @@ def test() -> None:
     synthesizer.draw_circuit(filename='testing/grover_oracle.png')
 
     # Testing with verilog
-    bf.create_manual_verilog(network, "testing/manual_coloring.v")
-    bf.write_verilog_with_custom_mapping(network, "testing/manual_coloring_custom.v")
-    synthesizer.from_verilog_file("testing/manual_coloring.v")
-    synthesizer.synthesize_with_xag()
-    synthesizer.print_circuit_info()
-    synthesizer.draw_circuit(filename='testing/grover_oracle_verilog.png')
+    # bf.create_manual_verilog(network, "testing/manual_coloring.v")
+    # bf.write_verilog_with_custom_mapping(network, "testing/manual_coloring_custom.v")
+    # synthesizer.from_verilog_file("testing/manual_coloring.v")
+    # synthesizer.synthesize_with_xag()
+    # synthesizer.print_circuit_info()
+    # synthesizer.draw_circuit(filename='testing/grover_oracle_verilog.png')
 
 if __name__ == "__main__":
     test()

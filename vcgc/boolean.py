@@ -1,3 +1,4 @@
+import math
 from vcgc.network import *
 from tweedledum.classical import write_verilog
 from tweedledum.bool_function_compiler.bool_function import BoolFunction
@@ -90,11 +91,17 @@ class BooleanFunction():
         """
         vertices: list = list(network.graph.nodes())
         edges: list = list(network.graph.edges())
-        bits_per_color: int = network.available_colors.bit_length()
+        bits_per_color: int = math.ceil(math.log2(network.available_colors))
+
+        # Find vertices that are actually used in edges
+        used_vertices = set()
+        for u, v in edges:
+            used_vertices.add(u)
+            used_vertices.add(v)
         
-        # Create variable names for each bit of each vertex
+        # Create variable names only for vertices that appear in edges
         var_names = []
-        for vertex in vertices:
+        for vertex in sorted(used_vertices):
             for bit in range(bits_per_color):
                 var_names.append(f"v{vertex}_{bit}")
         
