@@ -5,7 +5,7 @@ from vcgc.synthesis import Synthesizer
 def test() -> None:
 
     network = VCPNetwork()
-    network.read_dimacs("dimacs/myciel3.col")
+    network.read_dimacs("dimacs/g006.col")
     network.draw_graph(name="testing/graph.png", node_size=500)
     bf = BooleanFunction()
     bf.print_vertex_constraints(network)
@@ -18,6 +18,7 @@ def test() -> None:
     synthesizer.synthesize_with_xag()
     synthesizer.print_circuit_info()
     synthesizer.draw_circuit(filename='testing/grover_oracle.png')
+    print(f"The circuit depth: {synthesizer.qiskit_circuit.depth()}")
 
     # Testing with verilog
     # bf.create_manual_verilog(network, "testing/manual_coloring.v")
