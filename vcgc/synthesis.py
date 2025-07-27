@@ -55,3 +55,8 @@ class Synthesizer:
         """Get classical function from a verilog file."""
         cf = BoolFunction.from_verilog_file(path)
         self.logic_network = cf._logic_network
+    
+    def synthesize_saha():
+        # TODO: Implement the synthesis method described in the paper:
+        #       Circuit Design for K-coloring Problem and its Implementation on Near-term Quantum Devices
+        None
