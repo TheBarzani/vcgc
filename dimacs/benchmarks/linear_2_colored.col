@@ -1,4 +1,5 @@
-c graph-001
+c linear_2_colored
+c Author: Ismael Barzani
 c 5 vertices, 4 edges, 2 colors
 p edge 5 4
 n 1 0

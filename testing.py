@@ -5,7 +5,7 @@ from vcgc.synthesis import Synthesizer
 def test() -> None:
 
     network = VCPNetwork()
-    network.read_dimacs("dimacs/g006.col")
+    network.read_dimacs("dimacs/benchmarks/zed-city_2019.col")
     network.draw_graph(name="testing/graph.png", node_size=500)
     bf = BooleanFunction()
     bf.print_vertex_constraints(network)
