@@ -2,7 +2,7 @@
 
 import networkx as nx
 from matplotlib import pyplot as plt
-from vcgc.dimacs import *
+from .dimacs import *
 import random
 from typing import Optional
 from networkx import bfs_tree

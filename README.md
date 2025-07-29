@@ -32,7 +32,42 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install dependencies
 uv pip install -r requirements.txt
+
+# Install vcgc package in development mode
+uv pip install -e .
 ```
+
+## 📦 Using the VCGC Package
+
+The `vcgc` package provides a Python API for working with vertex coloring problems and quantum circuits:
+
+```python
+import vcgc
+
+# Create a vertex coloring problem network
+network = vcgc.VCPNetwork()
+
+# Read a graph from DIMACS format
+network.read_dimacs("path/to/your/graph.col")
+
+# Generate boolean expressions for coloring constraints  
+bf = vcgc.BooleanFunction()
+expression, variables = bf.generate_coloring_expression(network)
+
+# Synthesize quantum circuits
+synthesizer = vcgc.Synthesizer()
+qiskit_circuit = synthesizer.synthesize_with_xag()
+
+# Or read DIMACS files directly
+num_vertices, num_edges, colors, edges, colored_vertices = vcgc.read_dimacs("file.col")
+```
+
+### Package Components
+
+- **`VCPNetwork`**: Create and manage graph networks for vertex coloring problems
+- **`BooleanFunction`**: Generate boolean expressions and constraints for graph coloring
+- **`Synthesizer`**: Convert logic networks to quantum circuits using XAG synthesis
+- **`read_dimacs`**: Read graph data from DIMACS format files
 
 ## 📚 Getting Started
 

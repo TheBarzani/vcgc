@@ -21,5 +21,8 @@ mthree
 networkx
 dotenv
 
+# Testing
+pytest
+
 # Sythesis packages
 # tweedledum # Deprecated package

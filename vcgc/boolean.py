@@ -1,5 +1,5 @@
 import math
-from vcgc.network import *
+from .network import *
 from tweedledum.classical import write_verilog
 from tweedledum.bool_function_compiler.bool_function import BoolFunction
 
