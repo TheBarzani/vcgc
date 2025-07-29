@@ -1,6 +1,6 @@
 [submodule "tweedledum"]
 	path = tweedledum
 	url = https://github.com/TheBarzani/tweedledum.git
-[submodule "saha-oscar"]
-	path = saha-oscar
-	url = https://github.com/TheBarzani/saha-oscar.git
+[submodule "saha-belletti"]
+	path = saha-belletti
+	url = https://github.com/TheBarzani/saha-belletti.git
