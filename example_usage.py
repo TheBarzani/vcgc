@@ -4,6 +4,7 @@ Example demonstrating how to use the vcgc package
 """
 
 import vcgc
+from qiskit.qasm3 import dump
 
 def main():
     print("=== VCGC Package Demo ===")
@@ -14,7 +15,7 @@ def main():
     # 1. Create a VCP Network
     print("1. Creating a VCP Network...")
     network = vcgc.VCPNetwork()
-    network.read_dimacs("dimacs/benchmarks/zed-city_2019.col") # Read Dimacs file
+    network.read_dimacs("dimacs/benchmarks/K5.col") # Read Dimacs file
     network.draw_graph(name="output/graph.png", node_size=500) # Draw nice graph using NetworkX
     
     # 2. Create a Boolean Function
@@ -29,6 +30,8 @@ def main():
     synthesizer = vcgc.Synthesizer(tweedledum_func_multibit)
     synthesizer.synthesize_with_xag()
     synthesizer.print_circuit_info()
+    with open("output/example.qasm","w") as f:
+        dump(circuit=synthesizer.qiskit_circuit, stream=f)
     synthesizer.draw_circuit(filename='output/grover_oracle.png')
     print(f"The circuit depth: {synthesizer.qiskit_circuit.depth()}")
 

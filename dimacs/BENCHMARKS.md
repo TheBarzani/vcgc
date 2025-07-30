@@ -3,6 +3,7 @@
 
 # Chosen Benchmarks
 - K3
+- K5
 - myciel3
 - myciel4
 - myciel5
