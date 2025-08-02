@@ -1,7 +1,15 @@
 with import <nixpkgs> { };
 
 let
-  pythonPackages = python311Packages; # Change to Python 3.11
+  # Import our custom pip derivation that has Python 3.10 compatibility fixes
+  customPip = python310Packages.callPackage ./default.nix { };
+  
+  pythonPackages = python310Packages.override {
+    overrides = self: super: {
+      # Use our custom pip derivation instead of the broken one
+      pip = customPip;
+    };
+  };
 in pkgs.mkShell rec {
   name = "impurePythonEnv";
   venvDir = "./.venv";
@@ -10,8 +18,8 @@ in pkgs.mkShell rec {
     pkgs.stdenv.cc.cc.lib
     git-crypt
     pythonPackages.python
-    pythonPackages.ipykernel
-    pythonPackages.pyzmq
+    # pythonPackages.ipykernel
+    # pythonPackages.pyzmq
     pythonPackages.venvShellHook
     pythonPackages.pip
     pythonPackages.numpy
@@ -19,11 +27,12 @@ in pkgs.mkShell rec {
     pythonPackages.requests
     pythonPackages.networkx
     pythonPackages.matplotlib
-    pythonPackages.pkgconfig
+    # Remove pkgconfig as it might be pulling in sphinx
+    # pythonPackages.pkgconfig
     # Add build dependencies
     pythonPackages.setuptools
     pythonPackages.wheel
-    pythonPackages.scikit-build
+    # pythonPackages.scikit-build
     pkgs.cmake
     pkgs.ninja
     pkgs.pkg-config
