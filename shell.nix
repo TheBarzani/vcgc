@@ -1,7 +1,7 @@
 with import <nixpkgs> { };
 
 let
-  pythonPackages = python310Packages; # Change to Python 3.10
+  pythonPackages = python311Packages; # Change to Python 3.11
 in pkgs.mkShell rec {
   name = "impurePythonEnv";
   venvDir = "./.venv";
