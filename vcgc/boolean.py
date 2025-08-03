@@ -73,7 +73,7 @@ class BooleanFunction():
         # Create BoolFunction from expression
         return BoolFunction.from_expression(expression, var_order)
 
-    def create_multi_bit_function(self, network: VCPNetwork):
+    def create_multi_bit_function(self, network: VCPNetwork, debug: bool = False):
         """
         Create a function for multi-bit color representation.
         This creates a more complex expression handling multi-bit inequalities.
@@ -129,8 +129,9 @@ class BooleanFunction():
         else:
             expression = " & ".join(constraints)
         
-        print(f"Generated multi-bit expression: {expression}")
-        print(f"Variable order: {var_names}")
+        if debug:
+            print(f"Generated multi-bit expression: {expression}")
+            print(f"Variable order: {var_names}")
         
         return BoolFunction.from_expression(expression, var_names)
     
