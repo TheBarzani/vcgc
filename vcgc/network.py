@@ -16,8 +16,9 @@ class VCPNetwork:
     graph = nx.Graph()  # Declare a graph object
     color_map = []
 
-    def __init__(self):
-        pass
+    def __init__(self, file_path: str = None):
+        if file_path:
+            self.read_dimacs(file_path=file_path) 
     
     def read_dimacs(self, file_path: str) -> None:
         self.num_vertices, self.num_edges, self.available_colors, self.edges, self.colored_vertices = read_dimacs(file_path=file_path)
@@ -51,7 +52,7 @@ class VCPNetwork:
         color_map = color_map[:num_colors]
         
         # Create vertices with color attributes
-        for v in range(1,num_vertices):
+        for v in range(1,num_vertices+1):
             # Check if this node has a color assigned
             if str(v) in colored_nodes:
                 color_idx = int(colored_nodes[str(v)])

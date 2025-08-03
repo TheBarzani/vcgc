@@ -4,8 +4,8 @@ c since it requires the minimum number of colors (3) where each vertex
 c must have a unique color.
 c 3 vertices, 3 edges, 3 colors
 p edge 3 3
-n 0 1
-e 0 1
-e 0 2
+n 1 0
 e 1 2
+e 1 3
+e 2 3
 x colors 3

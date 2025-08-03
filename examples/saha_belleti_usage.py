@@ -1,6 +1,7 @@
-from saha_belletti import *
+from saha_belletti.core import *
 from vcgc import *
 from qiskit import QuantumCircuit
+import matplotlib.pyplot as plt
 
 def main():
     """
@@ -27,6 +28,7 @@ def main():
     # 2. Generate Saha-Belleti Circuits
     qc: QuantumCircuit = generate_circuit(graph=network.graph, colors=network.available_colors, oracle_type='original', grover_iterations=1) # grover_iterations
     print(f"Saha-Belletti circuit depth: {qc.depth()}")
+    # qc.draw(output="mpl")
 
     # 3. Create a Boolean Function
     bf = BooleanFunction() 
@@ -37,6 +39,7 @@ def main():
     synthesizer = Synthesizer(tweedledum_func_multibit)
     synthesizer.synthesize_with_xag()
     print(f"VCGC circuit depth: {synthesizer.qiskit_circuit.depth()}")
+    # synthesizer.qiskit_circuit.draw(output="mpl")
 
 if __name__ == "__main__":
     main()
