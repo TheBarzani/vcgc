@@ -24,5 +24,5 @@ dotenv
 # Testing
 pytest
 
-# Sythesis packages
-# tweedledum # Deprecated package
+# Visualization packages
+graphviz
