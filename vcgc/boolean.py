@@ -1,3 +1,4 @@
+# A module that prepares and analyzes Boolean Functions and Logic Networks
 import math
 from .network import *
 from tweedledum.classical import write_verilog
