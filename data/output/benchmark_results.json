@@ -1,0 +1,342 @@
+{
+  "2-Insertions_3": {
+    "graph_info": {
+      "nodes": 37,
+      "edges": 72,
+      "colors": 4
+    },
+    "vcgc": {
+      "qubits": 217,
+      "depth": 168,
+      "gates": 1238
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 112,
+        "depth": 888,
+        "gates": 2862
+      },
+      "minimal": {
+        "qubits": 83,
+        "depth": 3142,
+        "gates": 19099
+      },
+      "simple": {
+        "qubits": 147,
+        "depth": 98,
+        "gates": 1817
+      },
+      "balanced": {
+        "qubits": 88,
+        "depth": 178,
+        "gates": 3014
+      }
+    }
+  },
+  "zed-city_2019": {
+    "graph_info": {
+      "nodes": 11,
+      "edges": 22,
+      "colors": 4
+    },
+    "vcgc": {
+      "qubits": 65,
+      "depth": 87,
+      "gates": 378
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 34,
+        "depth": 378,
+        "gates": 834
+      },
+      "minimal": {
+        "qubits": 29,
+        "depth": 512,
+        "gates": 2433
+      },
+      "simple": {
+        "qubits": 45,
+        "depth": 78,
+        "gates": 555
+      },
+      "balanced": {
+        "qubits": 30,
+        "depth": 150,
+        "gates": 920
+      }
+    }
+  },
+  "myciel5": {
+    "graph_info": {
+      "nodes": 47,
+      "edges": 236,
+      "colors": 6
+    },
+    "vcgc": {
+      "qubits": 848,
+      "depth": 547,
+      "gates": 5004
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 191,
+        "depth": 4146,
+        "gates": 12822
+      },
+      "minimal": {
+        "qubits": 152,
+        "depth": 26776,
+        "gates": 198309
+      },
+      "simple": {
+        "qubits": 472,
+        "depth": 246,
+        "gates": 7693
+      },
+      "balanced": {
+        "qubits": 169,
+        "depth": 476,
+        "gates": 13944
+      }
+    }
+  },
+  "myciel4": {
+    "graph_info": {
+      "nodes": 23,
+      "edges": 71,
+      "colors": 5
+    },
+    "vcgc": {
+      "qubits": 281,
+      "depth": 186,
+      "gates": 1650
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 96,
+        "depth": 1186,
+        "gates": 4256
+      },
+      "minimal": {
+        "qubits": 79,
+        "depth": 7890,
+        "gates": 53391
+      },
+      "simple": {
+        "qubits": 210,
+        "depth": 130,
+        "gates": 2727
+      },
+      "balanced": {
+        "qubits": 88,
+        "depth": 286,
+        "gates": 4809
+      }
+    }
+  },
+  "grid6_2_colored": {
+    "graph_info": {
+      "nodes": 6,
+      "edges": 7,
+      "colors": 2
+    },
+    "vcgc": {
+      "qubits": 12,
+      "depth": 40,
+      "gates": 74
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 13,
+        "depth": 88,
+        "gates": 145
+      },
+      "minimal": {
+        "qubits": 11,
+        "depth": 96,
+        "gates": 221
+      },
+      "simple": {
+        "qubits": 14,
+        "depth": 38,
+        "gates": 118
+      },
+      "balanced": {
+        "qubits": 11,
+        "depth": 58,
+        "gates": 173
+      }
+    }
+  },
+  "myciel3": {
+    "graph_info": {
+      "nodes": 11,
+      "edges": 20,
+      "colors": 4
+    },
+    "vcgc": {
+      "qubits": 61,
+      "depth": 69,
+      "gates": 354
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 34,
+        "depth": 308,
+        "gates": 708
+      },
+      "minimal": {
+        "qubits": 29,
+        "depth": 492,
+        "gates": 2359
+      },
+      "simple": {
+        "qubits": 43,
+        "depth": 68,
+        "gates": 517
+      },
+      "balanced": {
+        "qubits": 30,
+        "depth": 138,
+        "gates": 844
+      }
+    }
+  },
+  "1-FullIns_3": {
+    "graph_info": {
+      "nodes": 30,
+      "edges": 100,
+      "colors": 4
+    },
+    "vcgc": {
+      "qubits": 259,
+      "depth": 226,
+      "gates": 1504
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 91,
+        "depth": 1312,
+        "gates": 3491
+      },
+      "minimal": {
+        "qubits": 69,
+        "depth": 4028,
+        "gates": 24565
+      },
+      "simple": {
+        "qubits": 161,
+        "depth": 128,
+        "gates": 2265
+      },
+      "balanced": {
+        "qubits": 76,
+        "depth": 248,
+        "gates": 3930
+      }
+    }
+  },
+  "linear_2_colored": {
+    "graph_info": {
+      "nodes": 5,
+      "edges": 4,
+      "colors": 2
+    },
+    "vcgc": {
+      "qubits": 8,
+      "depth": 26,
+      "gates": 51
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 11,
+        "depth": 38,
+        "gates": 70
+      },
+      "minimal": {
+        "qubits": 9,
+        "depth": 38,
+        "gates": 99
+      },
+      "simple": {
+        "qubits": 10,
+        "depth": 28,
+        "gates": 79
+      },
+      "balanced": {
+        "qubits": 9,
+        "depth": 38,
+        "gates": 102
+      }
+    }
+  },
+  "K3": {
+    "graph_info": {
+      "nodes": 3,
+      "edges": 3,
+      "colors": 3
+    },
+    "vcgc": {
+      "qubits": 11,
+      "depth": 28,
+      "gates": 73
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 11,
+        "depth": 24,
+        "gates": 76
+      },
+      "minimal": {
+        "qubits": 11,
+        "depth": 88,
+        "gates": 211
+      },
+      "simple": {
+        "qubits": 13,
+        "depth": 38,
+        "gates": 107
+      },
+      "balanced": {
+        "qubits": 11,
+        "depth": 61,
+        "gates": 147
+      }
+    }
+  },
+  "K5": {
+    "graph_info": {
+      "nodes": 5,
+      "edges": 10,
+      "colors": 5
+    },
+    "vcgc": {
+      "qubits": 44,
+      "depth": 55,
+      "gates": 264
+    },
+    "saha_belletti": {
+      "original": {
+        "qubits": 24,
+        "depth": 146,
+        "gates": 540
+      },
+      "minimal": {
+        "qubits": 22,
+        "depth": 620,
+        "gates": 2527
+      },
+      "simple": {
+        "qubits": 41,
+        "depth": 74,
+        "gates": 450
+      },
+      "balanced": {
+        "qubits": 24,
+        "depth": 144,
+        "gates": 761
+      }
+    }
+  }
+}
