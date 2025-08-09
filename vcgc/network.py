@@ -8,15 +8,15 @@ from typing import Optional
 from networkx import bfs_tree
 
 class VCPNetwork:
-    edges = []
-    colored_vertices = {}
-    num_vertices = 0
-    num_edges = 0
-    available_colors = 0
-    graph = nx.Graph()  # Declare a graph object
-    color_map = []
 
     def __init__(self, file_path: str = None):
+        self.edges = []
+        self.colored_vertices = {}
+        self.num_vertices = 0
+        self.num_edges = 0
+        self.available_colors = 0
+        self.graph = nx.Graph()  # Declare a graph object
+        self.color_map = []
         if file_path:
             self.read_dimacs(file_path=file_path) 
     
